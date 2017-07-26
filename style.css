@@ -63,6 +63,8 @@ html, body {
 
 h1 {
 	font-family: 'Montserrat', sans-serif;
+	font-size: 5.75em;
+	line-height: 1em;
 	text-transform: uppercase;
 	color: #444;
 }
@@ -125,6 +127,230 @@ section {
 	section:nth-child(even) {
 		background-color: #f0f0f0;
 	}
+
+
+section#contact {
+	padding: 4em 0;
+}
+	.contact-wrapper {
+		width: 90%;
+		max-width: 748px;
+		margin: 0 auto;
+		padding-top: 80px;
+		background: url("assets/images/toucan.png") no-repeat top center;
+		background-size: contain;
+	}
+		.contact-form {
+			width: 100%;
+			max-width: 440px;
+		}
+			.contact-form h1 {
+				color: #6870db;
+			}
+				.contact-form h1:after {
+					content: " ";
+					display: block;
+					width: 80px;
+					height: 6px;
+					background-color: #6870db;
+					margin: 15px 0 40px;
+				}
+			.contact-form form {
+				width: 100%;
+			}
+
+				.contact-form form textarea {
+					font-family: 'Titillium Web', sans-serif;
+					padding: .75em 0;
+					height: 4.5em;
+				}
+				.contact-form form input {
+					font-family: 'Titillium Web', sans-serif;
+				}
+				.contact-form form input[type="submit"] {
+					font-family: 'Titillium Web', sans-serif;
+					text-transform: uppercase;
+					color: #fff;
+					font-size: 1.2em;
+					line-height: 1em;
+					padding: .75em 2em;
+					display: inline-block;
+					width: auto;
+					background-color: #6870db;
+					border: none;
+					outline: none;
+					border-radius: 0;
+					margin-top: .5em;
+					cursor: pointer;
+					-webkit-transition: .3s;
+					transition: .3s;
+				}
+					.contact-form form input[type="submit"]:hover {
+						background-color: red;
+					}
+
+		.input {
+			position: relative;
+			z-index: 1;
+			display: block;
+			width: 100%;
+			vertical-align: top;
+		}
+
+		.input__field {
+			font-size: 1.5em;
+			line-height: 1em;
+			position: relative;
+			display: block;
+			float: right;
+			padding: 0.8em 1.5em;
+			width: 100%;
+			border: none;
+			border-radius: 0;
+			background: #f0f0f0;
+			color: #aaa;
+			-webkit-appearance: none; /* for box shadows to show on iOS */
+		}
+
+		.input__field:focus {
+			outline: none;
+		}
+
+		.input__label {
+			display: inline-block;
+			float: right;
+			padding: 0 1em;
+			color: #6a7989;
+			font-weight: bold;
+			font-size: .75em;
+			-webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.input__label-content {
+			position: relative;
+			display: block;
+			padding: 3em 0;
+			width: 100%;
+		}
+
+		/* Individual styles */
+
+		/* Hoshi */
+		.input--hoshi {
+			overflow: hidden;
+		}
+
+		.input__field--hoshi {
+			margin-top: 1em;
+			padding: 0.5em 0.15em;
+			width: 100%;
+			background: transparent;
+			color: #595F6E;
+		}
+
+		.input__label--hoshi {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 0 0.5em;
+			width: 100%;
+			height: calc(100% - .75em);
+			text-align: left;
+			pointer-events: none;
+		}
+
+		.input__label-content--hoshi {
+			position: absolute;
+		}
+
+		.input__label--hoshi::before,
+		.input__label--hoshi::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% - 2px);
+			border-bottom: 1px solid #B9C1CA;
+		}
+
+		.input__label--hoshi::after {
+			margin-top: -3px;
+			border-bottom: 4px solid red;
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
+			-webkit-transition: -webkit-transform 0.3s;
+			transition: transform 0.3s;
+		}
+
+		.input__label--hoshi-color-1::after {
+			border-color: #6870db;
+		}
+
+		.input__label--hoshi-color-2::after {
+			border-color: #6870db;
+		}
+
+		.input__label--hoshi-color-3::after {
+			border-color: #6870db;
+		}
+
+		.input__field--hoshi:focus + .input__label--hoshi::after,
+		.input--filled .input__label--hoshi::after {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+		.input--filled .input__label-content--hoshi {
+			-webkit-animation: anim-1 0.3s forwards;
+			animation: anim-1 0.3s forwards;
+		}
+
+		@-webkit-keyframes anim-1 {
+			50% {
+				opacity: 0;
+				-webkit-transform: translate3d(1em, 0, 0);
+				transform: translate3d(1em, 0, 0);
+			}
+			51% {
+				opacity: 0;
+				-webkit-transform: translate3d(-1em, -40%, 0);
+				transform: translate3d(-1em, -40%, 0);
+			}
+			100% {
+				opacity: 1;
+				-webkit-transform: translate3d(0, -40%, 0);
+				transform: translate3d(0, -40%, 0);
+			}
+		}
+
+		@keyframes anim-1 {
+			50% {
+				opacity: 0;
+				-webkit-transform: translate3d(1em, 0, 0);
+				transform: translate3d(1em, 0, 0);
+			}
+			51% {
+				opacity: 0;
+				-webkit-transform: translate3d(-1em, -40%, 0);
+				transform: translate3d(-1em, -40%, 0);
+			}
+			100% {
+				opacity: 1;
+				-webkit-transform: translate3d(0, -40%, 0);
+				transform: translate3d(0, -40%, 0);
+			}
+		}
+
+
 
 footer {
 	width: 100%;

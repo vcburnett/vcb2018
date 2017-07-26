@@ -56,11 +56,32 @@
 	</section>
 
 	<section id="contact">
-		<div id="contact-top">
-
-		</div>
-		<div class="contact-form">
-
+		<div class="contact-wrapper">
+			<div class="contact-form">
+				<h1 id="h1-contact">Say Hello</h1>
+				<p>Use the form below to contact me about... well, basically anything, from projects to comments. Or send me jokes. I love jokes.</p>
+				<form>
+					<span class="input input--hoshi">
+						<input class="input__field input__field--hoshi" type="text" />
+						<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+							<span class="input__label-content input__label-content--hoshi">Name</span>
+						</label>
+					</span>
+					<span class="input input--hoshi">
+						<input class="input__field input__field--hoshi" type="text" />
+						<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-4">
+							<span class="input__label-content input__label-content--hoshi">Email</span>
+						</label>
+					</span>
+					<span class="input input--hoshi">
+						<textarea class="input__field input__field--hoshi" type="text" /></textarea>
+						<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-4">
+							<span class="input__label-content input__label-content--hoshi">Name</span>
+						</label>
+					</span>
+					<input type="submit" value="Send message">
+				</form>
+			</div>
 		</div>
 	</section>
 
@@ -72,6 +93,42 @@
 
 	<!-- Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/js/classie.js"></script>
+		<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
 	<!-- end Scripts -->
 
 </body>

@@ -14,15 +14,17 @@
 <body>
 
 	<header>
-		<div id="vcb-logo">
-			<img src="assets/images/vcb-logo-lines.svg" alt="Victor Burnett">
+		<div class="wrapper-full">
+			<nav>
+				<a href="javascript:void(0);">What I Do</a>
+				<a href="javascript:void(0);">Portfolio</a>
+				<a href="javascript:void(0);">About Me</a>
+				<a href="javascript:void(0);">Say Hello</a>
+			</nav>
+			<div id="vcb-header-logo">
+				<img src="assets/images/vcb-logo-lines.svg" alt="Victor Burnett">
+			</div>
 		</div>
-		<nav>
-			<a href="javascript:void(0);">What I Do</a>
-			<a href="javascript:void(0);">Portfolio</a>
-			<a href="javascript:void(0);">About Me</a>
-			<a href="javascript:void(0);">Say Hello</a>
-		</nav>
 	</header>
 
 	<section id="hp-intro">
@@ -63,7 +65,9 @@
 	</section>
 
 	<footer>
-		<p>&copy;2017 Victor Burnett. All rights reserved.</p>
+		<div class="wrapper-1024">
+			<p>&copy;2017 Victor Burnett. All rights reserved.</p>
+		</div>
 	</footer>
 
 	<!-- Scripts -->

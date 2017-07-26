@@ -49,6 +49,7 @@ table {
 img {
 	width: 100%;
 	height: auto;
+	display: block;
 }
 
 /* ** CODE ** */
@@ -66,9 +67,67 @@ h1 {
 	color: #444;
 }
 
+a {
+	color: #4a9bd3;
+	-webkit-transition: .3s;
+	transition: .3s;
+}
+	a:hover {
+		color: #d39b4a;
+	}
+
+/* -- General CSS -- */
+.wrapper-1024 {
+	width: 90%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+.wrapper-full {
+	width: 100%;
+	max-width: 2048px;
+	margin: 0 auto;
+	padding: 0 2em;
+}
+
+header {
+	width: 100%;
+	display: table;
+	position: fixed;
+}
+	#vcb-header-logo {
+		width: 12%;
+		max-width: 50px;
+		padding: 1em;
+		box-sizing: content-box;
+		margin: 0 auto;
+	}
+	nav {
+		font-size: .8em;
+		line-height: 1em;
+		float: right;
+		padding-top: 3.4em;
+	}
+		nav a {
+			color: #666;
+			text-decoration: none;
+			margin: 0 0 0 1.75em;
+		}
+			nav a:hover {
+			}
+			nav a:before {
+				content: "+  ";
+			}
+
+section {
+	width: 100vw;
+	min-height: 100vh; 
+}
+	section:nth-child(even) {
+		background-color: #f0f0f0;
+	}
+
 footer {
 	width: 100%;
-	text-align: center;
 	font-size: .7em;
 	line-height: 1em;
 	color: #999;

@@ -28,11 +28,13 @@
 	</header>
 
 	<section id="hp-intro">
-		<div class="content-front">
+		<div class="content-back">
+			<div class="content-front">
 
-		</div>
-		<div class="content-square">
-
+			</div>
+			<div class="square-image">
+				<img src="assets/images/image-intro.jpg" alt="Victor Burnett Design">
+			</div>
 		</div>
 	</section>
 
@@ -117,8 +119,31 @@
 	</section>
 
 	<section id="hp-about">
-		<div class="content-front">
-
+		<div class="content-back" id="about-wrapper">
+			<div class="content-front cf-about">
+				<div class="cf-left">
+					<div class="cf-left-wrapper">
+						<ul>
+							<li>Design</li>
+							<li>BBQ</li>
+							<li>Speed</li>
+							<li>Photography</li>
+							<li>Video Games</li>
+						</ul>
+					</div>
+				</div>
+				<div class="cf-right">
+					<div class="cf-right-wrapper">
+						<p>Bresaola salami pork loin alcatra porchetta drumstick leberkas hamburger pork belly kevin beef pork pastrami tri-tip. Tri-tip pork loin chicken corned beef. Chicken turducken tri-tip pork belly biltong venison salami pork cupim jerky. Salami pork belly pork alcatra drumstick, brisket meatball venison capicola.</p>
+					</div>
+				</div>
+			</div>
+			<div class="square-image">
+				<img src="assets/images/image-about.gif" alt="Victor Burnett Design">
+				<div class="content-front">
+					<a href="javascript:void(0);" class="cta-border">Check out my blog</a>
+				</div>
+			</div>
 		</div>
 	</section>
 

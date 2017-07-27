@@ -112,6 +112,7 @@ header {
 	width: 100%;
 	display: table;
 	position: fixed;
+	z-index: 100;
 }
 	#vcb-header-logo {
 		width: 12%;
@@ -145,14 +146,59 @@ section {
 		background-color: #f0f0f0;
 	}
 
+/* Content */
+.cta-border {
+	display: inline-block;
+	color: #606060;
+	border: 2px solid #606060;
+	padding: .65em 2.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top: 2em;
+}
+
+.content-back {
+	width: 96%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+	.square-image {
+		width: 420px;
+		margin: 0 auto;
+		position: relative;
+	}
+		.square-image img {
+			box-shadow: 0 5px 8px rgba(0,0,0,.14);
+		}
+	.content-front {
+		width: 100%;
+		position: absolute;
+		display: inline-block;
+		z-index: 10;
+		text-align: center;
+	}
+		.cf-left {
+			display: inline-block;
+			width: 49%;
+			vertical-align: middle;
+		}
+		.cf-right {
+			display: inline-block;
+			width: 49%;
+			vertical-align: middle;
+		}
+
+/* Services */
 section#hp-services {
 
 }
-	#contact-wrapper {
+	#services-wrapper {
 		width: 100%;
 	}
 	.content-text-wrapper {
-		width: 100%;
+		width: 96%;
 		max-width: 748px;
 		margin: 0 auto;
 	}
@@ -186,6 +232,9 @@ section#hp-services {
 					display: inline-block;
 					margin-bottom: .75em;
 				}
+				.main-service p {
+					color: #999;
+				}
 		.secondary-services-wrapper {
 			width: 75%;
 			display: inline-block;
@@ -194,6 +243,7 @@ section#hp-services {
 				width: 14%;
 				margin: 0 2%;
 				display: inline-block;	
+				vertical-align: top;
 			}
 				.secondary-service .ss-icon {
 					width: 65px;
@@ -205,7 +255,29 @@ section#hp-services {
 					line-height: 1.15em;
 				}
 
+/* About */
+section#hp-about {
 
+}
+	.cf-about .cf-left-wrapper {
+		text-align: right;
+		padding-right: 150px;
+	}
+		.cf-about .cf-left-wrapper ul li {
+			display: block;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 3em;
+			line-height: 1em;
+			text-transform: uppercase;
+			color: #ccc;
+		}
+	.cf-about .cf-right-wrapper {
+		text-align: left;
+		width: 300px;
+		margin-left: 150px;
+	}
+	
+/* Contact */
 section#hp-contact {
 
 }
@@ -432,4 +504,73 @@ footer {
 	color: #999;
 	padding: 2em 0;
 	background-color: #fff;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1050px) {
+	.cf-about .cf-left-wrapper {
+		padding-right: 110px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.secondary-services-wrapper {
+		width: 100%;
+	}
+		.secondary-service h2 {
+			font-size: .85em;
+			line-height: 1.15em;
+		}
+
+	.cf-about .cf-left-wrapper {
+		padding-right: 110px;
+	}
+		.cf-about .cf-left-wrapper ul li {
+			font-size: 2.15em;
+			line-height: 1.15em;
+		}
+	.cf-about .cf-right-wrapper {
+		margin-left: 60px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.cf-left {
+		display: block;
+		width: 100%;
+	}
+	.cf-right {
+		display: block;
+		width: 100%;
+	}
+	.cf-about .cf-left-wrapper {
+		text-align: left;
+		padding-right: 0;
+	}
+		.cf-about .cf-left-wrapper ul li {
+			font-size: 3em;
+			line-height: 1.15em;
+		}
+}
+
+@media screen and (max-width: 640px) {
+	.content-text h1 {
+		font-size: 3em;
+		line-height: 1.15em;
+	}
+		.main-service {
+			width: 45%;
+			margin-bottom: 2em;
+		}
+		.secondary-service {
+			width: 28%;
+			margin-bottom: 2em;
+		}
+}
+
+@media screen and (max-width: 380px) {
+	.main-service p {
+		font-size: .82em;
+		line-height: 1.25em;
+	}
 }

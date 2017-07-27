@@ -7,10 +7,15 @@ $( document ).ready(function() {
 	var secServices = $("#hp-services");
 	var servicesWrapper = $("#services-wrapper");
 
+	var secAbout = $("#hp-about");
+	var aboutWrapper = $("#about-wrapper");
+	var aboutSquare = $("#about-wrapper .square-image");
+	var aboutContent = $(".cf-about");
+
 	var secContact = $("#hp-contact");
 	var contactWrapper = $("#contact-wrapper");
 
-	var secServicesH, servicesWrapperH, secContactH, contactWrapperH;
+	var secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutSquareH, aboutContentH, secContactH, contactWrapperH;
 
 	function updateElements() {
 
@@ -23,6 +28,20 @@ $( document ).ready(function() {
 		} else {
 			secServices.css("padding", "8em 0");
 		}
+		/* About */
+		secAboutH = secAbout.outerHeight();
+		aboutWrapperH = aboutWrapper.outerHeight(true);
+		aboutDelta = secAboutH - aboutWrapperH;
+		if (aboutDelta > 160) {
+			secAbout.css("padding-top", aboutDelta/2 + "px");
+		} else {
+			secAbout.css("padding", "8em 0");
+		}
+		aboutSquareH = aboutSquare.outerHeight();
+		aboutContentH = aboutContent.outerHeight();
+		aboutContentDelta = aboutSquareH - aboutContentH;
+		aboutContent.css("margin-top", aboutContentDelta/2 + "px");
+
 		/* Contact */
 		secContactH = secContact.outerHeight();
 		contactWrapperH = contactWrapper.outerHeight(true);

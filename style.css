@@ -58,15 +58,29 @@ html, body {
 	font-family: 'Titillium Web', sans-serif;
 	font-size: 14px;
 	line-height: 20px;
+	color: #333;
 	background-color: #f4f4f4;
 }
 
 h1 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 5.75em;
+	font-size: 4.15em;
 	line-height: 1em;
 	text-transform: uppercase;
 	color: #444;
+}
+	h1:after {
+		content: " ";
+		display: block;
+		width: 80px;
+		height: 6px;
+		margin: 15px 0 40px;
+	}
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.25em;
+	line-height: 1.15em;
+	margin-bottom: .25em;
 }
 
 a {
@@ -77,6 +91,9 @@ a {
 	a:hover {
 		color: #d39b4a;
 	}
+p {
+	margin-bottom: .35em;
+}
 
 /* -- General CSS -- */
 .wrapper-1024 {
@@ -128,11 +145,71 @@ section {
 		background-color: #f0f0f0;
 	}
 
+section#hp-services {
 
-section#contact {
-	padding: 4em 0;
 }
-	.contact-wrapper {
+	#contact-wrapper {
+		width: 100%;
+	}
+	.content-text-wrapper {
+		width: 100%;
+		max-width: 748px;
+		margin: 0 auto;
+	}
+		.content-text {
+			width: 96%;
+			max-width: 464px;
+		}
+			.content-text h1:after {
+				background-color: #2da6aa;
+			}
+	.content-full-width {
+		width: 96%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+		section#hp-services .content-full-width {
+			text-align: center;
+		}
+		.main-services-wrapper {
+			width: 100%;
+			display: inline-block;
+			margin: 2.4em auto;
+		}
+			.main-service {
+				width: 20%;
+				margin: 0 2%;
+				display: inline-block;
+			}
+				.main-service .ms-icon {
+					width: 80px;
+					display: inline-block;
+					margin-bottom: .75em;
+				}
+		.secondary-services-wrapper {
+			width: 75%;
+			display: inline-block;
+		}
+			.secondary-service {
+				width: 14%;
+				margin: 0 2%;
+				display: inline-block;	
+			}
+				.secondary-service .ss-icon {
+					width: 65px;
+					display: inline-block;
+					margin-bottom: .25em;
+				}
+				.secondary-service h2 {
+					font-size: 1em;
+					line-height: 1.15em;
+				}
+
+
+section#hp-contact {
+
+}
+	#contact-wrapper {
 		width: 90%;
 		max-width: 748px;
 		margin: 0 auto;
@@ -145,15 +222,11 @@ section#contact {
 			max-width: 440px;
 		}
 			.contact-form h1 {
+				font-size: 5.75em;
 				color: #6870db;
 			}
 				.contact-form h1:after {
-					content: " ";
-					display: block;
-					width: 80px;
-					height: 6px;
 					background-color: #6870db;
-					margin: 15px 0 40px;
 				}
 			.contact-form form {
 				width: 100%;
@@ -199,7 +272,7 @@ section#contact {
 
 		.input__field {
 			font-size: 1.5em;
-			line-height: 1em;
+			line-height: 1.25em;
 			position: relative;
 			display: block;
 			float: right;

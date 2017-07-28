@@ -28,10 +28,21 @@
 	</header>
 
 	<section id="hp-intro">
-		<div class="content-back">
-			<div class="content-front">
-
+		<div class="content-front" id="intro-outer-wrapper">
+			<div id="intro-wrapper">
+				<div id="intro-title">
+					<h1>Ametim Loremip</h1>
+					<h2>Baconips Chipse</h2>
+				</div>
+				<div id="intro-content">
+					<p>Welcome to my website. I’m an art director based in Montreal. I have been working with advertising, marketing and design for the passed 13 years and have loved every second of it! Browse the site to check out my work. Maybe we will work together very soon.</p>
+					<div id="vb-logo">
+						<img src="assets/images/vb-signature.png" alt="Victor Burnett Creative">
+					</div>
+				</div>
 			</div>
+		</div>
+		<div class="content-back" id="intro-image-wrapper">
 			<div class="square-image">
 				<img src="assets/images/image-intro.jpg" alt="Victor Burnett Design">
 			</div>

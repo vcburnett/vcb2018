@@ -4,6 +4,9 @@ $( document ).ready(function() {
 	var browserH = browserWindow.height();
 	var browserW = browserWindow.width();
 
+	var secIntro = $("#hp-intro");
+	var introWrapper = $("#intro-image-wrapper");
+
 	var secServices = $("#hp-services");
 	var servicesWrapper = $("#services-wrapper");
 
@@ -15,9 +18,19 @@ $( document ).ready(function() {
 	var secContact = $("#hp-contact");
 	var contactWrapper = $("#contact-wrapper");
 
-	var secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutSquareH, aboutContentH, secContactH, contactWrapperH;
+	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutSquareH, aboutContentH, secContactH, contactWrapperH;
 
 	function updateElements() {
+
+		/* Intro */
+		secIntroH = secIntro.outerHeight();
+		introWrapperH = introWrapper.outerHeight(true);
+		introDelta = secIntroH - introWrapperH;
+		if (introDelta > 160) {
+			secIntro.css("padding-top", introDelta/2 + "px");
+		} else {
+			secIntro.css("padding", "8em 0");
+		}
 
 		/* Services */
 		secServicesH = secServices.outerHeight();
@@ -34,9 +47,12 @@ $( document ).ready(function() {
 		aboutDelta = secAboutH - aboutWrapperH;
 		if (aboutDelta > 160) {
 			secAbout.css("padding-top", aboutDelta/2 + "px");
-		} else {
-			secAbout.css("padding", "8em 0");
 		}
+		if (browserW <= 500) {
+			secAbout.css("padding", "10em 0 15em");
+		}
+		console.log ("aboutDelta = " + aboutDelta);
+		console.log ("browser = " + browserW);
 		aboutSquareH = aboutSquare.outerHeight();
 		aboutContentH = aboutContent.outerHeight();
 		aboutContentDelta = aboutSquareH - aboutContentH;

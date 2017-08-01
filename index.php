@@ -22,7 +22,7 @@
 				<a href="#hp-contact" class="scroll">Say Hello</a>
 			</nav>
 			<div id="vcb-header-logo">
-				<img src="assets/images/vcb-logo-lines.svg" alt="Victor Burnett">
+				<a href="index.php#hp-intro" class="scroll"><img src="assets/images/vcb-logo-lines.svg" alt="Victor Burnett"></a>
 			</div>
 		</div>
 	</header>
@@ -31,8 +31,8 @@
 		<div class="content-front" id="intro-outer-wrapper">
 			<div id="intro-wrapper">
 				<div id="intro-title">
-					<h1>Ametim Loremip</h1>
-					<h2>Baconips Chipse</h2>
+					<h1>Victor Burnett</h1>
+					<h2>Creative Junkie</h2>
 				</div>
 				<div id="intro-content">
 					<p>Welcome to my website. I’m an art director based in Montreal. I have been working with advertising, marketing and design for the passed 13 years and have loved every second of it! Browse the site to check out my work. Maybe we will work together very soon.</p>
@@ -126,29 +126,43 @@
 	</section>
 
 	<section id="hp-portfolio">
-
-	</section>
-
-	<section id="hp-about">
-		<div class="content-back" id="about-wrapper">
-			<div class="content-front cf-about">
-				<div class="cf-left">
-					<div class="cf-left-wrapper">
-						<ul>
-							<li>Design</li>
-							<li>BBQ</li>
-							<li>Speed</li>
-							<li>Photography</li>
-							<li>Video Games</li>
-						</ul>
-					</div>
-				</div>
-				<div class="cf-right">
-					<div class="cf-right-wrapper">
-						<p>Bresaola salami pork loin alcatra porchetta drumstick leberkas hamburger pork belly kevin beef pork pastrami tri-tip. Tri-tip pork loin chicken corned beef. Chicken turducken tri-tip pork belly biltong venison salami pork cupim jerky. Salami pork belly pork alcatra drumstick, brisket meatball venison capicola.</p>
+		<div id="hp-slider">
+			<div class="slider-pagination">
+				<a href="javascript:void(0);" alt="name of client"></a>
+				<a href="javascript:void(0);" alt="name of client"></a>
+				<a href="javascript:void(0);" alt="name of client"></a>
+				<a href="javascript:void(0);" alt="name of client"></a>
+			</div>
+			<div id="slide-content">
+				<div class="slide" id="slide-1" style="background-image: url('assets/images/_temp/image-slider-1.jpg')">
+					<div class="slide-info">
+						<h1>Lorem ipsum dolor</h1>
+						<p>Chicken turducken tri-tip pork belly biltong venison salami pork cupim jerky.</p>
+						<a href="javascript:void(0);">View this project</a>
 					</div>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section id="hp-about">
+		<div class="content-front" id="about-outer-wrapper">
+			<div id="about-wrapper">
+				<div id="about-items">
+					<ul>
+						<li>Design</li>
+						<li>BBQ</li>
+						<li>Speed</li>
+						<li>Photography</li>
+						<li>Video Games</li>
+					</ul>
+				</div>
+				<div id="about-content">
+					<p>Bresaola salami pork loin alcatra porchetta drumstick leberkas hamburger pork belly kevin beef pork pastrami tri-tip. Tri-tip pork loin chicken corned beef. Chicken turducken tri-tip pork belly biltong venison salami pork cupim jerky. Salami pork belly pork alcatra drumstick, brisket meatball venison capicola.</p>
+				</div>
+			</div>
+		</div>
+		<div class="content-back" id="about-image-wrapper">
 			<div class="square-image">
 				<img src="assets/images/image-about.gif" alt="Victor Burnett Design">
 				<div class="content-front">

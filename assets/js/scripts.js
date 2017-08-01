@@ -11,14 +11,13 @@ $( document ).ready(function() {
 	var servicesWrapper = $("#services-wrapper");
 
 	var secAbout = $("#hp-about");
-	var aboutWrapper = $("#about-wrapper");
-	var aboutSquare = $("#about-wrapper .square-image");
-	var aboutContent = $(".cf-about");
+	var aboutWrapper = $("#about-image-wrapper");
+	var aboutContentWrapper = $("#about-wrapper");
 
 	var secContact = $("#hp-contact");
 	var contactWrapper = $("#contact-wrapper");
 
-	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutSquareH, aboutContentH, secContactH, contactWrapperH;
+	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, secContactH, contactWrapperH;
 
 	function updateElements() {
 
@@ -47,16 +46,12 @@ $( document ).ready(function() {
 		aboutDelta = secAboutH - aboutWrapperH;
 		if (aboutDelta > 160) {
 			secAbout.css("padding-top", aboutDelta/2 + "px");
+		} else {
+			secAbout.css("padding", "8em 0");
 		}
-		if (browserW <= 500) {
-			secAbout.css("padding", "10em 0 15em");
-		}
-		console.log ("aboutDelta = " + aboutDelta);
-		console.log ("browser = " + browserW);
-		aboutSquareH = aboutSquare.outerHeight();
-		aboutContentH = aboutContent.outerHeight();
-		aboutContentDelta = aboutSquareH - aboutContentH;
-		aboutContent.css("margin-top", aboutContentDelta/2 + "px");
+		aboutContentWrapperH = aboutContentWrapper.outerHeight();
+		aboutWrapDelta = aboutWrapperH - aboutContentWrapperH;
+		aboutContentWrapper.css("padding-top", aboutWrapDelta/2 + "px");
 
 		/* Contact */
 		secContactH = secContact.outerHeight();

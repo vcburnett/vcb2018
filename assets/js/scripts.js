@@ -14,10 +14,15 @@ $( document ).ready(function() {
 	var aboutWrapper = $("#about-image-wrapper");
 	var aboutContentWrapper = $("#about-wrapper");
 
+	var secPortfolio = $("#hp-portfolio");
+	var hpSlider = $("#hp-slider");
+	var hpSliderPagination = $("#slider-pagination");
+	var hpSliderContent = $(".slide-info");
+
 	var secContact = $("#hp-contact");
 	var contactWrapper = $("#contact-wrapper");
 
-	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, secContactH, contactWrapperH;
+	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContentH, secContactH, contactWrapperH;
 
 	function updateElements() {
 
@@ -42,7 +47,7 @@ $( document ).ready(function() {
 		}
 		/* About */
 		secAboutH = secAbout.outerHeight();
-		aboutWrapperH = aboutWrapper.outerHeight(true);
+		aboutWrapperH = aboutWrapper.outerHeight();
 		aboutDelta = secAboutH - aboutWrapperH;
 		if (aboutDelta > 160) {
 			secAbout.css("padding-top", aboutDelta/2 + "px");
@@ -52,6 +57,15 @@ $( document ).ready(function() {
 		aboutContentWrapperH = aboutContentWrapper.outerHeight();
 		aboutWrapDelta = aboutWrapperH - aboutContentWrapperH;
 		aboutContentWrapper.css("padding-top", aboutWrapDelta/2 + "px");
+
+		/* Portfolio */
+		hpSliderH = hpSlider.outerHeight();
+		hpSliderPaginationH = hpSliderPagination.outerHeight();
+		hpSliderContentH = hpSliderContent.outerHeight();
+		deltaPagination = (hpSliderH - hpSliderPaginationH) / 2 + "px";
+		deltaSliderContent = (hpSliderH - hpSliderContentH) / 2 +"px";
+		hpSliderPagination.css("margin-top", deltaPagination);
+		hpSliderContent.css("margin-top", deltaSliderContent);
 
 		/* Contact */
 		secContactH = secContact.outerHeight();
@@ -73,6 +87,40 @@ $( document ).ready(function() {
 	$(window).on('scroll', function() {
 	    var yScroll = window.pageYOffset;
 	    var scrollTrigger = 75;	// set to whatever you want it to be
+
+	    var posIntro = secIntro.offset().top;
+	    var posServices = secServices.offset().top;
+	    var posPortfolio = secPortfolio.offset().top;
+	    var posAbout = secAbout.offset().top;
+	    var posContact = secContact.offset().top;
+
+	    var navA = $("nav a");
+	    var navServices = $("#navServices");
+	    var navPortfolio = $("#navPortfolio");
+	    var navAbout = $("#navAbout");
+	    var navContact = $("#navContact");
+
+	    console.log("Intro offset : " + posIntro);
+	    console.log("Services offset : " + posServices);
+	    console.log("Portfolio offset : " + posPortfolio);
+	    console.log("About offset : " + posAbout);
+	    console.log("Contact offset : " + posContact);
+
+		if ( yScroll >= posIntro && yScroll < posServices) {
+			navA.removeClass("navSelected");
+		} else if ( yScroll >= posServices && yScroll < posPortfolio) {
+			navA.removeClass("navSelected");
+			navServices.addClass("navSelected");
+		} else if ( yScroll >= posPortfolio && yScroll < posAbout) {
+			navA.removeClass("navSelected");
+			navPortfolio.addClass("navSelected");
+		} else if ( yScroll >= posAbout && yScroll < posContact) {
+			navA.removeClass("navSelected");
+			navAbout.addClass("navSelected");
+		} else if ( yScroll >= posContact) {
+			navA.removeClass("navSelected");
+			navContact.addClass("navSelected");
+		}
 
 	    console.log("yScroll = " + yScroll);
 

@@ -90,11 +90,39 @@ a {
 	transition: .3s;
 }
 	a:hover {
-		color: #d39b4a;
+		color: #5cade8;
 	}
 p {
 	margin-bottom: .35em;
 }
+
+.cta-blue, .cta-red {
+	font-size: 1.25em;
+	line-height: 1.15em;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: .65em 2em;
+	margin: .15em auto;
+	display: inline-block;
+	background-color: #5cade8;
+	vertical-align: middle;
+}
+.cta-red {
+	font-size: 1.5em;
+	line-height: 1.15em;
+	background-color: #cb0b79;
+}
+	.cta-blue:hover {
+		color: #fff;
+		background-color: #3b729a;
+		text-shadow: 0 2px 3px rgba(0,0,0,.2);
+	}
+	.cta-red:hover {
+		color: #fff;
+		background-color: #9a0058;
+		text-shadow: 0 2px 3px rgba(0,0,0,.2);
+	}
 
 /* -- General CSS -- */
 .wrapper-1024 {
@@ -131,12 +159,18 @@ header {
 		nav a {
 			color: #666;
 			text-decoration: none;
-			margin: 0 0 0 1.75em;
+			margin: 0 .25em;
+			padding: .25em .75em;
+			border-radius: 3px;
 		}
 			nav a:hover {
 			}
 			nav a:before {
 				content: "+  ";
+			}
+			nav a.navSelected {
+				color: #fff;
+				background-color: #83a9c4;
 			}
 
 section {
@@ -305,11 +339,36 @@ section#hp-services {
 		height: calc(100vh - 180px);
 		display: block;
 		margin: 90px auto 0;
+		position: relative;
 	}
 		#slider-pagination {
 			position: absolute;
 			left: 0;
 		}
+			#slider-pagination a {
+				width: 66px;
+				height: 66px;
+				display: block;
+				border-radius: 50%;
+				background: no-repeat center center;
+				background-size: cover;
+				margin: .5em 0 .5em 2em;
+				background-color: #eee;
+				position: relative;
+				-webkit-transition: .3s;
+				transition: .3s;
+			}
+				#slider-pagination a:hover {
+					top: -.2em;
+					box-shadow: 0 .2em 4px rgba(0,0,0,.14);
+				}
+				#slider-pagination a.port-link-selected, #slider-pagination a:hover.port-link-selected {
+					margin-left: .5em;
+					box-shadow: 0 .4em 4px rgba(0,0,0,.2);
+					top: 0;
+					cursor: default;
+					background-color: red;
+				}
 		#slide-content {
 			width: 100%;
 			height: 100%;
@@ -329,7 +388,6 @@ section#hp-services {
 					text-align: left;
 					padding: 5% 7% 5% 5%;
 					box-sizing: content-box;
-					border-radius: 1em 0 0 1em;
 				}
 					.slide-info h1 {
 						font-size: 2.75em;
@@ -354,6 +412,16 @@ section#hp-services {
 							background-color: #ff0080;
 							color: #fff;
 						}
+	.port-actions {
+		width: 100%;
+		text-align: center;
+		position: relative;
+		z-index: 10;
+		margin-top: -2.25em;
+	}
+		.port-actions a {
+			display: inline-block;
+		}
 
 /* About */
 section#hp-about {
@@ -639,6 +707,12 @@ footer {
 		font-size: 3.2em;
 		line-height: 1em;
 	}
+
+	#hp-slider {
+		width: calc(100% - 100px);
+		height: calc(100vh - 100px);
+		margin: 50px auto 0;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -655,6 +729,12 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
+
+	.cta-red, .cta-blue {
+		font-size: 1.25em;
+		line-height: 1.15em;
+	}
+
 	#intro-title {
 		margin-right: 150px;
 	}
@@ -682,6 +762,51 @@ footer {
 	}
 	#about-content {
 		display: none;
+	}
+
+	#hp-slider {
+		width: calc(100% - 20px);
+		height: calc(100vh - 20px);
+		margin: 10px auto 0;
+	}
+		#slide-content {
+		}
+			.slide {
+				text-align: center;
+			}
+				.slide-info {
+					width: 100%;
+					text-align: center;
+					padding: 5%;
+					box-sizing: border-box;
+					bottom: 3.75em;
+					position: absolute;
+					left: 0;
+				}
+					.slide-info h1 {
+						font-size: 1.75em;
+						line-height: 1.15em;
+					}
+					.slide-info h1:after {
+						margin: .25em auto .5em;
+						height: 2px;
+					}
+					.slide-info p {
+						display: none;
+					}
+		#slider-pagination {
+			width: 100%;
+			text-align: center;
+		}
+			#slider-pagination a {
+				width: 54px;
+				height: 54px;
+				display: inline-block;
+				margin: 2em .5em 0 .5em;
+				position: relative;
+			}
+	.port-actions {
+		margin-top: -2.75em;
 	}
 }
 

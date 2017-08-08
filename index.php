@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport" />
-<title>TITLE</title>
+<title>Victor Burnett</title>
 <link rel="shortcut icon" href="assets/images/favicon.png"/>
 
 <link rel="stylesheet" href="style.css">
@@ -16,10 +16,10 @@
 	<header>
 		<div class="wrapper-full">
 			<nav>
-				<a href="#hp-services" class="scroll">What I Do</a>
-				<a href="#hp-portfolio" class="scroll">Portfolio</a>
-				<a href="#hp-about" class="scroll">About Me</a>
-				<a href="#hp-contact" class="scroll">Say Hello</a>
+				<a href="#hp-services" id="navServices" class="scroll">What I Do</a>
+				<a href="#hp-portfolio" id="navPortfolio" class="scroll">Portfolio</a>
+				<a href="#hp-about" id="navAbout" class="scroll">About Me</a>
+				<a href="#hp-contact" id="navContact" class="scroll">Say Hello</a>
 			</nav>
 			<div id="vcb-header-logo">
 				<a href="index.php#hp-intro" class="scroll"><img src="assets/images/vcb-logo-lines.svg" alt="Victor Burnett"></a>
@@ -55,7 +55,7 @@
 				<div class="content-text">
 					<h1>What I Do</h1>
 					<p>I am an Art Director at Konversion, where I get to work with some really cool clients. On my role, I work with UX and UI design as well as marketing strategy.</p>
-					<p>In a good part of my free time, I develop some projects with some friends and work with freelancing, developing and enjoying other fields that are passions of mine: branding, design & illustration, photography, web development and marketing & advertising.</p>
+					<p>In a good part of my free time, I develop some projects with some friends and work with freelancing, developing and enjoying other fields that are passions of mine: branding, design &amp; illustration, photography, web development and marketing &amp; advertising.</p>
 				</div>
 			</div>
 			<div class="content-full-width">
@@ -127,9 +127,9 @@
 
 	<section id="hp-portfolio">
 		<div id="hp-slider">
-			<div class="slider-pagination">
+			<div id="slider-pagination">
 				<a href="javascript:void(0);" alt="name of client"></a>
-				<a href="javascript:void(0);" alt="name of client"></a>
+				<a href="javascript:void(0);" alt="name of client" class="port-link-selected"></a>
 				<a href="javascript:void(0);" alt="name of client"></a>
 				<a href="javascript:void(0);" alt="name of client"></a>
 			</div>
@@ -142,6 +142,9 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="port-actions">
+			<a href="javascript:void(0);" class="cta-red">View the full portfolio</a><br><a href="javascript:void(0);" class="cta-blue">Let's work together</a>
 		</div>
 	</section>
 

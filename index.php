@@ -17,7 +17,8 @@
 		<div class="wrapper-full">
 			<nav>
 				<a href="#hp-services" id="navServices" class="scroll">What I Do</a>
-				<a href="#hp-portfolio" id="navPortfolio" class="scroll">Portfolio</a>
+				<a href="#hp-portfolio" id="navPortfolio" class="scroll">My work</a>
+				<a href="portfolio.php" id="navPortfolio" class="scroll">Portfolio</a>
 				<a href="#hp-about" id="navAbout" class="scroll">About Me</a>
 				<a href="#hp-contact" id="navContact" class="scroll">Say Hello</a>
 			</nav>
@@ -128,23 +129,44 @@
 	<section id="hp-portfolio">
 		<div id="hp-slider">
 			<div id="slider-pagination">
-				<a href="javascript:void(0);" alt="name of client"></a>
-				<a href="javascript:void(0);" alt="name of client" class="port-link-selected"></a>
-				<a href="javascript:void(0);" alt="name of client"></a>
-				<a href="javascript:void(0);" alt="name of client"></a>
+				<a href="javascript:void(0);" alt="name of client" id="slider-btn-1" class="port-link-selected"></a>
+				<a href="javascript:void(0);" alt="name of client" id="slider-btn-2"></a>
+				<a href="javascript:void(0);" alt="name of client" id="slider-btn-3"></a>
+				<a href="javascript:void(0);" alt="name of client" id="slider-btn-4"></a>
 			</div>
 			<div id="slide-content">
-				<div class="slide" id="slide-1" style="background-image: url('assets/images/_temp/image-slider-1.jpg')">
+				<div class="slide slide-active" id="slide-1" style="background-image: url('assets/images/_temp/image-slider-1.jpg')">
 					<div class="slide-info">
-						<h1>Lorem ipsum dolor</h1>
+						<h1>Lorem ipsum dolor 1</h1>
 						<p>Chicken turducken tri-tip pork belly biltong venison salami pork cupim jerky.</p>
+						<a href="javascript:void(0);">View this project</a>
+					</div>
+				</div>
+				<div class="slide" id="slide-2" style="background-image: url('assets/images/_temp/image-slider-2.jpg')">
+					<div class="slide-info">
+						<h1>Lorem dolor 2</h1>
+						<p>Chicken turducken tri-tip pork belly biltong venison salami pork cupim jerky lorem ipsum dolor sit amet consectetur.</p>
+						<a href="javascript:void(0);">View this project</a>
+					</div>
+				</div>
+				<div class="slide" id="slide-3" style="background-image: url('assets/images/_temp/image-slider-3.jpg')">
+					<div class="slide-info">
+						<h1>Consecte 3</h1>
+						<p>Chicken turducken tri-tip pork biltong venison pork cupim jerky.</p>
+						<a href="javascript:void(0);">View this project</a>
+					</div>
+				</div>
+				<div class="slide" id="slide-4" style="background-image: url('assets/images/_temp/image-slider-4.jpg')">
+					<div class="slide-info">
+						<h1>Lorem ips 4</h1>
+						<p>Chicken turducken belly biltong venison salami pork cupim jerky.</p>
 						<a href="javascript:void(0);">View this project</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="port-actions">
-			<a href="javascript:void(0);" class="cta-red">View the full portfolio</a><br><a href="javascript:void(0);" class="cta-blue">Let's work together</a>
+			<a href="portfolio.php" class="cta-red">View the full portfolio</a><br><a href="#hp-contact" class="scroll cta-blue">Let's work together</a>
 		</div>
 	</section>
 

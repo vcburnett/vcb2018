@@ -344,6 +344,7 @@ section#hp-services {
 		#slider-pagination {
 			position: absolute;
 			left: 0;
+			z-index: 10;
 		}
 			#slider-pagination a {
 				width: 66px;
@@ -380,6 +381,11 @@ section#hp-services {
 				background: no-repeat center center;
 				background-size: cover;
 				text-align: right;
+				position: absolute;
+				opacity: 0;
+    			filter: alpha(opacity=0);
+				-webkit-transition: .5s;
+				transition: .5s;
 			}
 				.slide-info {
 					width: 300px;
@@ -412,6 +418,10 @@ section#hp-services {
 							background-color: #ff0080;
 							color: #fff;
 						}
+				.slide-active {
+					opacity: 1;
+	    			filter: alpha(opacity=100);
+				}
 	.port-actions {
 		width: 100%;
 		text-align: center;
@@ -693,6 +703,21 @@ footer {
 }
 
 @media screen and (max-width: 960px) {
+	header {
+		width: 100%;
+		display: table;
+		position: fixed;
+		z-index: 100;
+	}
+		#vcb-header-logo {
+			max-width: 28px;
+			margin: 0;
+			padding: .5em;
+		}
+		nav {
+			padding-top: 1.8em;
+		}
+
 	.secondary-services-wrapper {
 		width: 100%;
 	}

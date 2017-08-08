@@ -17,12 +17,15 @@ $( document ).ready(function() {
 	var secPortfolio = $("#hp-portfolio");
 	var hpSlider = $("#hp-slider");
 	var hpSliderPagination = $("#slider-pagination");
-	var hpSliderContent = $(".slide-info");
+	var hpSliderContent1 = $("#slide-1 .slide-info");
+	var hpSliderContent2 = $("#slide-2 .slide-info");
+	var hpSliderContent3 = $("#slide-3 .slide-info");
+	var hpSliderContent4 = $("#slide-4 .slide-info");
 
 	var secContact = $("#hp-contact");
 	var contactWrapper = $("#contact-wrapper");
 
-	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContentH, secContactH, contactWrapperH;
+	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContent1H, hpSliderContent2H, hpSliderContent3H, hpSliderContent4H, secContactH, contactWrapperH;
 
 	function updateElements() {
 
@@ -61,11 +64,20 @@ $( document ).ready(function() {
 		/* Portfolio */
 		hpSliderH = hpSlider.outerHeight();
 		hpSliderPaginationH = hpSliderPagination.outerHeight();
-		hpSliderContentH = hpSliderContent.outerHeight();
+		hpSliderContent1H = hpSliderContent1.outerHeight();
+		hpSliderContent2H = hpSliderContent2.outerHeight();
+		hpSliderContent3H = hpSliderContent3.outerHeight();
+		hpSliderContent4H = hpSliderContent4.outerHeight();
 		deltaPagination = (hpSliderH - hpSliderPaginationH) / 2 + "px";
-		deltaSliderContent = (hpSliderH - hpSliderContentH) / 2 +"px";
+		deltaSliderContent1 = (hpSliderH - hpSliderContent1H) / 2 +"px";
+		deltaSliderContent2 = (hpSliderH - hpSliderContent2H) / 2 +"px";
+		deltaSliderContent3 = (hpSliderH - hpSliderContent3H) / 2 +"px";
+		deltaSliderContent4 = (hpSliderH - hpSliderContent4H) / 2 +"px";
 		hpSliderPagination.css("margin-top", deltaPagination);
-		hpSliderContent.css("margin-top", deltaSliderContent);
+		hpSliderContent1.css("margin-top", deltaSliderContent1);
+		hpSliderContent2.css("margin-top", deltaSliderContent2);
+		hpSliderContent3.css("margin-top", deltaSliderContent3);
+		hpSliderContent4.css("margin-top", deltaSliderContent4);
 
 		/* Contact */
 		secContactH = secContact.outerHeight();
@@ -164,6 +176,55 @@ $( document ).ready(function() {
 		);
 		return false;
     });
+
+    // Slider
+    var sliderBtn = $("#slider-pagination a");
+    var slide = $(".slide");
+    var slide1 = $("#slide-1");
+    var slide2 = $("#slide-2");
+    var slide3 = $("#slide-3");
+    var slide4 = $("#slide-4");
+    var sliderBtn1 = $("#slider-btn-1");
+    var sliderBtn2 = $("#slider-btn-2");
+    var sliderBtn3 = $("#slider-btn-3");
+    var sliderBtn4 = $("#slider-btn-4");
+
+	sliderBtn1.on("click", function() {
+    	if ( !$(this).hasClass("port-link-selected") ) {
+    		sliderBtn.removeClass("port-link-selected");
+    		$(this).addClass("port-link-selected");
+    	}
+		slide.removeClass("slide-active");
+		slide1.addClass("slide-active");
+		console.log("Btn 1 clicked");
+	});
+	sliderBtn2.on("click", function() {
+    	if ( !$(this).hasClass("port-link-selected") ) {
+    		sliderBtn.removeClass("port-link-selected");
+    		$(this).addClass("port-link-selected");
+    	}
+		slide.removeClass("slide-active");
+		slide2.addClass("slide-active");
+		console.log("Btn 2 clicked");
+	});
+	sliderBtn3.on("click", function() {
+    	if ( !$(this).hasClass("port-link-selected") ) {
+    		sliderBtn.removeClass("port-link-selected");
+    		$(this).addClass("port-link-selected");
+    	}
+		slide.removeClass("slide-active");
+		slide3.addClass("slide-active");
+		console.log("Btn 3 clicked");
+	});
+	sliderBtn4.on("click", function() {
+    	if ( !$(this).hasClass("port-link-selected") ) {
+    		sliderBtn.removeClass("port-link-selected");
+    		$(this).addClass("port-link-selected");
+    	}
+		slide.removeClass("slide-active");
+		slide4.addClass("slide-active");
+		console.log("Btn 4 clicked");
+	});
 
     // Mobile Menu button
 

@@ -13,11 +13,19 @@
 
 <body>
 
+	<a id="cta-freelance"><img src="" alt="Hire me as your freelancer"></a>
+
+	<a href="javascript:void(0);" id="mm-btn-mobile">
+		<div class="brgr-line" id="brgr-line-1"></div>
+		<div class="brgr-line" id="brgr-line-2"></div>
+		<div class="brgr-line" id="brgr-line-3"></div>
+	</a>
+
 	<header>
 		<div class="wrapper-full">
 			<nav>
 				<a href="#hp-services" id="navServices" class="scroll">What I Do</a>
-				<a href="#hp-portfolio" id="navPortfolio" class="scroll">My work</a>
+				<a href="#hp-portfolio" id="navWork" class="scroll">My work</a>
 				<a href="portfolio.php" id="navPortfolio" class="scroll">Portfolio</a>
 				<a href="#hp-about" id="navAbout" class="scroll">About Me</a>
 				<a href="#hp-contact" id="navContact" class="scroll">Say Hello</a>

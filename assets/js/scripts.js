@@ -4,6 +4,9 @@ $( document ).ready(function() {
 	var browserH = browserWindow.height();
 	var browserW = browserWindow.width();
 
+	var btnMMmob = $("#mm-btn-mobile");
+	var header = $("header");
+
 	var secIntro = $("#hp-intro");
 	var introWrapper = $("#intro-image-wrapper");
 
@@ -14,7 +17,7 @@ $( document ).ready(function() {
 	var aboutWrapper = $("#about-image-wrapper");
 	var aboutContentWrapper = $("#about-wrapper");
 
-	var secPortfolio = $("#hp-portfolio");
+	var secWork = $("#hp-portfolio");
 	var hpSlider = $("#hp-slider");
 	var hpSliderPagination = $("#slider-pagination");
 	var hpSliderContent1 = $("#slide-1 .slide-info");
@@ -28,6 +31,16 @@ $( document ).ready(function() {
 	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContent1H, hpSliderContent2H, hpSliderContent3H, hpSliderContent4H, secContactH, contactWrapperH;
 
 	function updateElements() {
+
+		browserH = browserWindow.height();
+		browserW = browserWindow.width();
+
+		/* Header */
+		if ( browserW > 540 ) {
+			header.removeClass("open");
+			btnMMmob.removeClass("btn-open");
+			console.log("BrowserW = " + browserW);
+		}
 
 		/* Intro */
 		secIntroH = secIntro.outerHeight();
@@ -97,35 +110,29 @@ $( document ).ready(function() {
 
 	// ON SCROLL
 	$(window).on('scroll', function() {
-	    var yScroll = window.pageYOffset;
-	    var scrollTrigger = 75;	// set to whatever you want it to be
+		var yScroll = window.pageYOffset;
+		var scrollTrigger = 75;	// set to whatever you want it to be
 
-	    var posIntro = secIntro.offset().top;
-	    var posServices = secServices.offset().top;
-	    var posPortfolio = secPortfolio.offset().top;
-	    var posAbout = secAbout.offset().top;
-	    var posContact = secContact.offset().top;
+		var posIntro = Math.round(secIntro.offset().top) - 1;
+		var posServices = Math.round(secServices.offset().top) - 1;
+		var posWork = Math.round(secWork.offset().top) - 1;
+		var posAbout = Math.round(secAbout.offset().top) - 1;
+		var posContact = Math.round(secContact.offset().top) - 1;
 
-	    var navA = $("nav a");
-	    var navServices = $("#navServices");
-	    var navPortfolio = $("#navPortfolio");
-	    var navAbout = $("#navAbout");
-	    var navContact = $("#navContact");
-
-	    console.log("Intro offset : " + posIntro);
-	    console.log("Services offset : " + posServices);
-	    console.log("Portfolio offset : " + posPortfolio);
-	    console.log("About offset : " + posAbout);
-	    console.log("Contact offset : " + posContact);
+		var navA = $("nav a");
+		var navServices = $("#navServices");
+		var navWork = $("#navWork");
+		var navAbout = $("#navAbout");
+		var navContact = $("#navContact");
 
 		if ( yScroll >= posIntro && yScroll < posServices) {
 			navA.removeClass("navSelected");
-		} else if ( yScroll >= posServices && yScroll < posPortfolio) {
+		} else if ( yScroll >= posServices && yScroll < posWork) {
 			navA.removeClass("navSelected");
 			navServices.addClass("navSelected");
-		} else if ( yScroll >= posPortfolio && yScroll < posAbout) {
+		} else if ( yScroll >= posWork && yScroll < posAbout) {
 			navA.removeClass("navSelected");
-			navPortfolio.addClass("navSelected");
+			navWork.addClass("navSelected");
 		} else if ( yScroll >= posAbout && yScroll < posContact) {
 			navA.removeClass("navSelected");
 			navAbout.addClass("navSelected");
@@ -134,99 +141,120 @@ $( document ).ready(function() {
 			navContact.addClass("navSelected");
 		}
 
-	    console.log("yScroll = " + yScroll);
-
-	    if(yScroll > scrollTrigger) {
+		if(yScroll > scrollTrigger) {
 			//mainMenu.removeClass("main-menu");
 			//mainMenu.addClass("scroll-menu");
 			//logoMobile.css("opacity", 100);
-	    } else {
+		} else {
 			//mainMenu.addClass("main-menu");
 			//mainMenu.removeClass("scroll-menu");
 			//logoMobile.css("opacity", 0);
-	    }
+		}
 
-	    //headerHome.css("background-position", "center " + yScroll*.7 + "px");
-	    //headerCS.css("background-position", "center " + yScroll*.8 + "px");
+		//headerHome.css("background-position", "center " + yScroll*.7 + "px");
+		//headerCS.css("background-position", "center " + yScroll*.8 + "px");
 	});	
 
 	//Scroll links
-    $(".scroll").click( function(event) {
+	$(".scroll").click( function(event) {
 
-        //get the full url - like mysitecom/index.htm#home
-        var full_url = this.href;
-        console.log("Full URL: " + full_url);
+			//get the full url - like mysitecom/index.htm#home
+			var full_url = this.href;
+			console.log("Full URL: " + full_url);
 
-        //split the url by # and get the anchor target name - home in mysitecom/index.htm#home
-        var parts = full_url.split("#");
-        var trgt = "#" + parts[1];
+			//split the url by # and get the anchor target name - home in mysitecom/index.htm#home
+			var parts = full_url.split("#");
+			var trgt = "#" + parts[1];
 
-       console.log("Taget anchor: " + trgt);
+			console.log("Taget anchor: " + trgt);
 
-        //get the top offset of the target anchor
-        var trgt_offset = $(trgt).offset();
-        var trgt_top = trgt_offset.top;
-        console.log("trgt_top " + trgt_top);
+			//get the top offset of the target anchor
+			var trgt_offset = $(trgt).offset();
+			var trgt_top = trgt_offset.top;
+			console.log("trgt_top " + trgt_top);
 
-        //goto that anchor by setting the body scroll top to anchor top
-        $('html, body').animate({
+			//goto that anchor by setting the body scroll top to anchor top
+			$('html, body').animate({
 			scrollTop:trgt_top},
 			750,
 			"swing"
 		);
 		return false;
-    });
+	});
 
-    // Slider
-    var sliderBtn = $("#slider-pagination a");
-    var slide = $(".slide");
-    var slide1 = $("#slide-1");
-    var slide2 = $("#slide-2");
-    var slide3 = $("#slide-3");
-    var slide4 = $("#slide-4");
-    var sliderBtn1 = $("#slider-btn-1");
-    var sliderBtn2 = $("#slider-btn-2");
-    var sliderBtn3 = $("#slider-btn-3");
-    var sliderBtn4 = $("#slider-btn-4");
+	// Slider
+	var sliderBtn = $("#slider-pagination a");
+	var slide = $(".slide");
+	var slide1 = $("#slide-1");
+	var slide2 = $("#slide-2");
+	var slide3 = $("#slide-3");
+	var slide4 = $("#slide-4");
+	var sliderBtn1 = $("#slider-btn-1");
+	var sliderBtn2 = $("#slider-btn-2");
+	var sliderBtn3 = $("#slider-btn-3");
+	var sliderBtn4 = $("#slider-btn-4");
 
 	sliderBtn1.on("click", function() {
-    	if ( !$(this).hasClass("port-link-selected") ) {
-    		sliderBtn.removeClass("port-link-selected");
-    		$(this).addClass("port-link-selected");
-    	}
+		if ( !$(this).hasClass("port-link-selected") ) {
+			sliderBtn.removeClass("port-link-selected");
+			$(this).addClass("port-link-selected");
+		}
 		slide.removeClass("slide-active");
 		slide1.addClass("slide-active");
 		console.log("Btn 1 clicked");
 	});
 	sliderBtn2.on("click", function() {
-    	if ( !$(this).hasClass("port-link-selected") ) {
-    		sliderBtn.removeClass("port-link-selected");
-    		$(this).addClass("port-link-selected");
-    	}
+		if ( !$(this).hasClass("port-link-selected") ) {
+			sliderBtn.removeClass("port-link-selected");
+			$(this).addClass("port-link-selected");
+		}
 		slide.removeClass("slide-active");
 		slide2.addClass("slide-active");
 		console.log("Btn 2 clicked");
 	});
 	sliderBtn3.on("click", function() {
-    	if ( !$(this).hasClass("port-link-selected") ) {
-    		sliderBtn.removeClass("port-link-selected");
-    		$(this).addClass("port-link-selected");
-    	}
+		if ( !$(this).hasClass("port-link-selected") ) {
+			sliderBtn.removeClass("port-link-selected");
+			$(this).addClass("port-link-selected");
+		}
 		slide.removeClass("slide-active");
 		slide3.addClass("slide-active");
 		console.log("Btn 3 clicked");
 	});
 	sliderBtn4.on("click", function() {
-    	if ( !$(this).hasClass("port-link-selected") ) {
-    		sliderBtn.removeClass("port-link-selected");
-    		$(this).addClass("port-link-selected");
-    	}
+		if ( !$(this).hasClass("port-link-selected") ) {
+			sliderBtn.removeClass("port-link-selected");
+			$(this).addClass("port-link-selected");
+		}
 		slide.removeClass("slide-active");
 		slide4.addClass("slide-active");
 		console.log("Btn 4 clicked");
 	});
 
-    // Mobile Menu button
+	// Mobile Menu button
+	btnMMmob.on("click", function() {
+		if ( header.hasClass("open") ) {
+			header.removeClass("open");
+			$(this).removeClass("btn-open");
+		} else {
+			header.addClass("open");
+			$(this).addClass("btn-open");
+		}
+	});
+
+	var btmMMservices = $("#navServices");
+	var btmMMwork = $("#navWork");
+	var btmMMportfolio = $("#navPortfolio");
+	var btmMMabout = $("#navAbout");
+	var btmMMcontact = $("#navContact");
+
+	var mmBtn = $("header nav a");
+	mmBtn.on("click", function() {
+		if ( browserW <= 540 ) {
+			header.removeClass("open");
+			btnMMmob.removeClass("btn-open");
+		}
+	});
 
 	$("#contact").submit(function(e) {
 		e.preventDefault();

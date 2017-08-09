@@ -28,7 +28,9 @@ $( document ).ready(function() {
 	var secContact = $("#hp-contact");
 	var contactWrapper = $("#contact-wrapper");
 
-	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContent1H, hpSliderContent2H, hpSliderContent3H, hpSliderContent4H, secContactH, contactWrapperH;
+	var prtfThumb = $("a.portfolio-thumb-link");
+
+	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContent1H, hpSliderContent2H, hpSliderContent3H, hpSliderContent4H, secContactH, contactWrapperH, prtfThumbW;
 
 	function updateElements() {
 
@@ -101,6 +103,10 @@ $( document ).ready(function() {
 		} else {
 			secContact.css("padding", "8em 0");
 		}
+
+		/* Portfolio page */
+		prtfThumbW = prtfThumb.outerWidth();
+		prtfThumb.css("height", prtfThumbW);
 	}
 
 	// ON RESIZE

@@ -655,6 +655,10 @@ section#hp-contact {
 			border-color: #6870db;
 		}
 
+		.input__label--hoshi-color-4::after {
+			border-color: #6870db;
+		}
+
 		.input__field--hoshi:focus + .input__label--hoshi::after,
 		.input--filled .input__label--hoshi::after {
 			-webkit-transform: translate3d(0, 0, 0);

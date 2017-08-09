@@ -256,7 +256,7 @@ $( document ).ready(function() {
 		}
 	});
 
-	$("#contact").submit(function(e) {
+	$("#contact-form").submit(function(e) {
 		e.preventDefault();
 
 		var form = $(this);
@@ -266,6 +266,7 @@ $( document ).ready(function() {
 
 		var name = $(form).find('input[name="name"]').val().trim();
 		var email = $(form).find('input[name="email"]').val().trim();
+		var company = $(form).find('input[name="company"]').val().trim();
 		var message = $(form).find('textarea[name="message"]').val().trim();
 		$(returnmessage).empty(); // To empty previous error/success message.
 		$(returnmessage).removeClass('error');

@@ -17,20 +17,46 @@
 	<?php include_once("modules/menu.php"); ?>
 
 
-	<section id="portfolio-body" class="internal-section">
-		<div id="portfolio-intro">
+	<section id="cs-body" class="internal-section">
+		<div id="cs-intro">
 			<div id="intro-title">
-				<h1>Victor Burnett</h1>
-				<h2>Portfolio</h2>
+				<h1>Açaí Berry</h1>
+				<h2>Branding</h2>
 			</div>
 			<a href="#hp-contact" class="scroll cta-blue">Let's work together</a>
 		</div>
 		<div class="internal-content-wrapper">
-			<p>Bacon ipsum dolor amet shank picanha pastrami doner ground round bresaola, venison pig kielbasa pork loin pork. Bacon sausage beef shank, hamburger cupim beef ribs tail. Boudin biltong pastrami salami spare ribs rump prosciutto. Cow ham hock shoulder pork pork chop shankle kevin ball tip fatback filet mignon biltong alcatra flank pig sirloin. Pork ball tip short ribs pork loin.</p>
-			<p>Meatball rump pork picanha jowl, pork belly ball tip strip steak alcatra shankle capicola. Fatback porchetta pig frankfurter, cow doner brisket swine strip steak short loin jerky. Sausage tenderloin filet mignon beef, picanha swine kevin t-bone flank turducken ground round brisket porchetta. Pancetta strip steak jowl t-bone chuck short loin prosciutto capicola pork chop hamburger leberkas doner ham hock. Short ribs spare ribs cupim pork prosciutto filet mignon biltong t-bone ball tip. Corned beef ham turducken, beef ribs bresaola shoulder pork chop sirloin. Pork loin ham hock chuck, andouille alcatra capicola chicken brisket hamburger picanha tongue kevin kielbasa.</p>
-			<p>Porchetta doner pork loin ground round filet mignon. Kielbasa prosciutto pig sausage leberkas swine salami. Leberkas pig cupim ham, tail tongue turducken picanha swine jerky. Ribeye turkey cupim pork frankfurter, pork belly leberkas chicken kevin. Ground round leberkas pork chop, venison pancetta sirloin jowl. Rump tenderloin porchetta drumstick. Flank pork swine, ball tip filet mignon chicken frankfurter.</p>
-			<p>Rump porchetta sirloin hamburger filet mignon. Leberkas biltong ball tip porchetta shoulder andouille frankfurter bresaola kevin ham chicken salami. Tail jerky brisket salami, ground round tongue cupim tri-tip pastrami short ribs landjaeger ham hock pork pig. Venison swine chicken doner pork chop. Shankle swine pastrami picanha alcatra prosciutto short ribs beef ribs ground round tenderloin fatback shoulder.</p>
-			<p>Shankle bacon turkey drumstick ham, picanha cow strip steak pork belly burgdoggen filet mignon corned beef. Short ribs picanha fatback salami leberkas capicola shoulder sirloin. Ham hock turkey ribeye salami porchetta meatloaf. Corned beef ground round bresaola burgdoggen, spare ribs doner turkey alcatra tail. Tri-tip jowl swine kevin salami, beef shankle biltong leberkas strip steak. Tongue boudin capicola drumstick cupim. Tail ham boudin jerky.</p>
+			<div class="cs-content-image"><img src="assets/images/_temp/image-slider-1.jpg"></div>
+			<div class="cs-content-text">
+				<p>Bacon ipsum dolor amet shank picanha pastrami doner ground round bresaola, venison pig kielbasa pork loin pork. Bacon sausage beef shank, hamburger cupim beef ribs tail. Boudin biltong pastrami salami spare ribs rump prosciutto. Cow ham hock shoulder pork pork chop shankle kevin ball tip fatback filet mignon biltong alcatra flank pig sirloin. Pork ball tip short ribs pork loin.</p>
+				<p>Meatball rump pork picanha jowl, pork belly ball tip strip steak alcatra shankle capicola. Fatback porchetta pig frankfurter, cow doner brisket swine strip steak short loin jerky. Sausage tenderloin filet mignon beef, picanha swine kevin t-bone flank turducken ground round brisket porchetta. Pancetta strip steak jowl t-bone chuck short loin prosciutto capicola pork chop hamburger leberkas doner ham hock. Short ribs spare ribs cupim pork prosciutto filet mignon biltong t-bone ball tip. Corned beef ham turducken, beef ribs bresaola shoulder pork chop sirloin. Pork loin ham hock chuck, andouille alcatra capicola chicken brisket hamburger picanha tongue kevin kielbasa.</p>
+			</div>
+			<div class="cs-content-image"><img src="assets/images/_temp/image-slider-2.jpg"></div>
+			<div class="cs-content-image"><img src="assets/images/_temp/image-slider-3.jpg"></div>
+			<div class="cs-content-image"><img src="assets/images/_temp/image-slider-4.jpg"></div>
+			<div class="cs-services">
+				<h3>Services Provided</h3>
+				<div class="cs-services-wrap">
+					<div class="cs-service">
+						<img src="assets/images/icon-consulting.png" alt="Consulting">
+					</div>
+					<div class="cs-service">
+						<img src="assets/images/icon-photography.png" alt="Photography">
+					</div>
+					<div class="cs-service">
+						<img src="assets/images/icon-marketing.png" alt="Marketing">
+					</div>
+					<div class="cs-service">
+						<img src="assets/images/icon-illustration.png" alt="Illustration">
+					</div>
+					<div class="cs-service">
+						<img src="assets/images/icon-branding.png" alt="Branding">
+					</div>
+				</div>
+			</div>
+			<div id="cs-thanks">
+				<img src="assets/images/_temp/thanks.jpg" alt="Thanks for the view">
+			</div>
 		</div>
 	</section>
 

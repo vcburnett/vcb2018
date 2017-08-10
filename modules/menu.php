@@ -7,11 +7,11 @@
 <header>
 	<div class="wrapper-full">
 		<nav>
-			<a href="#hp-services" id="navServices" class="scroll">What I Do</a>
-			<a href="#hp-portfolio" id="navWork" class="scroll">My work</a>
+			<a href="index.php#hp-services" id="navServices" class="scroll">What I Do</a>
+			<a href="index.php#hp-portfolio" id="navWork" class="scroll">My work</a>
 			<a href="portfolio.php" id="navPortfolio" class="scroll">Portfolio</a>
-			<a href="#hp-about" id="navAbout" class="scroll">About Me</a>
-			<a href="#hp-contact" id="navContact" class="scroll">Say Hello</a>
+			<a href="index.php#hp-about" id="navAbout" class="scroll">About Me</a>
+			<a href="index.php#hp-contact" id="navContact" class="scroll">Say Hello</a>
 		</nav>
 		<div id="vcb-header-logo">
 			<a href="index.php#hp-intro" class="scroll"><img src="assets/images/vcb-logo-lines.svg" alt="Victor Burnett"></a>

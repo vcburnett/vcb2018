@@ -28,9 +28,12 @@ $( document ).ready(function() {
 	var secContact = $("#hp-contact");
 	var contactWrapper = $("#contact-wrapper");
 
+	var secError = $("#error-body");
+	var errorWrap = $("#error-wrap");
+
 	var prtfThumb = $("a.portfolio-thumb-link");
 
-	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContent1H, hpSliderContent2H, hpSliderContent3H, hpSliderContent4H, secContactH, contactWrapperH, prtfThumbW;
+	var secIntroH, introWrapperH, secServicesH, servicesWrapperH, secAboutH, aboutWrapperH, aboutContentWrapperH, hpSliderH, hpSliderPaginationH, hpSliderContent1H, hpSliderContent2H, hpSliderContent3H, hpSliderContent4H, secContactH, contactWrapperH, prtfThumbW, secErrorH, errorWrapH;
 
 	function updateElements() {
 
@@ -107,6 +110,14 @@ $( document ).ready(function() {
 		/* Portfolio page */
 		prtfThumbW = prtfThumb.outerWidth();
 		prtfThumb.css("height", prtfThumbW);
+
+		/* Error Page */
+		secErrorH = secError.outerHeight();
+		errorWrapH = errorWrap.outerHeight();
+		errorDelta = secErrorH - errorWrapH;
+		errorWrap.css("padding-top", errorDelta/2 + "px");
+		console.log("secError height: " + secErrorH);
+		console.log("errorWrap height: " + errorWrapH);
 	}
 
 	// ON RESIZE

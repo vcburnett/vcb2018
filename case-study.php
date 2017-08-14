@@ -34,6 +34,8 @@
 			<div class="cs-content-image"><img src="assets/images/_temp/image-slider-2.jpg"></div>
 			<div class="cs-content-image"><img src="assets/images/_temp/image-slider-3.jpg"></div>
 			<div class="cs-content-image"><img src="assets/images/_temp/image-slider-4.jpg"></div>
+		</div>
+		<div class="internal-content-wrapper no-padding-top">
 			<div class="cs-services">
 				<h3>Services Provided</h3>
 				<div class="cs-services-wrap">

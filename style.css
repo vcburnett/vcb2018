@@ -361,6 +361,10 @@ section#hp-services {
 					font-size: 1em;
 					line-height: 1.15em;
 				}
+	.ms-cta {
+		width: 96%;
+		margin: 5em auto 0;
+	}
 
 /* Portfolio */
 #hp-portfolio {

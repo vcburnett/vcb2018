@@ -113,6 +113,9 @@
 						<h2>Consulting</h2>
 					</div>
 				</div>
+				<div class="ms-cta">
+					<a href="#hp-contact" class="cta-blue scroll">Let's work together</a>
+				</div>
 			</div>
 		</div>
 	</section>

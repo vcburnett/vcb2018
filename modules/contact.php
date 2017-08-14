@@ -3,7 +3,7 @@
 		<div class="contact-form">
 			<h1 id="h1-contact">Say Hello</h1>
 			<p>Use the form below to contact me about... well, basically anything, from projects to comments. Or send me jokes. I love jokes.</p>
-			<form id="contact-form" method="post" action="">
+			<form id="the-contact-form" method="post" action="">
 				<input type="hidden" name="form" value="contact-form" />
 				<div id="returnmessage" class="returnmessage"></div>
 				<span class="input input--hoshi">
